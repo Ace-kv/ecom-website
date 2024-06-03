@@ -2,32 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  .navbar {
+    @apply flex justify-between items-center m-8 md:m-16 lg:my-8 lg:mx-32 
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .nav-links {
+    @apply flex gap-12
+  }
+  
+  .search-bar {
+    @apply w-[30%]
+  }
+
+  /* .cart {
+    @apply bg-gray-100 hover:scale-110 hover:bg-gray-100 transition ease-in duration-200
+  } */
+
+  .cart-item-qty {
+    @apply absolute w-[21px] h-[20px] text-sm top-0 left-6 bg-red-500 rounded-full
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+  
