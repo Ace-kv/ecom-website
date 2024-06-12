@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navbar {
+    @apply flex justify-between items-center m-8 md:mx-16 xl:my-8 xl:mx-32
+  }
+
+  .nav-links {
+    @apply hidden lg:flex gap-12
+  }
+  
+  .search-bar {
+    @apply hidden lg:block relative w-[30%]
+  }
+
+  .search-icon {
+    @apply text-gray-400 absolute top-3 left-3
+  }
+
+  /* .cart {
+    @apply bg-gray-100 hover:scale-110 hover:bg-gray-100 transition ease-in duration-200
+  } */
+
+  .cart-item-qty {
+    @apply absolute w-[21px] h-[20px] text-sm top-0 left-6 bg-red-500 rounded-full
+  }
+
+}

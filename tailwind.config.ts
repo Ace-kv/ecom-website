@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        '1210bps': '1210px',
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

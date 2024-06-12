@@ -3,24 +3,41 @@
 @tailwind utilities;
 
 @layer base {
-  .navbar {
-    @apply flex justify-between items-center m-8 md:m-16 lg:my-8 lg:mx-32 
-  }
 
-  .nav-links {
-    @apply flex gap-12
-  }
-  
-  .search-bar {
-    @apply w-[30%]
-  }
-
-  /* .cart {
-    @apply bg-gray-100 hover:scale-110 hover:bg-gray-100 transition ease-in duration-200
+  /* main {
+    @apply m-16 1210bps:mx-24 xl:my-16 xl:mx-32
   } */
 
-  .cart-item-qty {
-    @apply absolute w-[21px] h-[20px] text-sm top-0 left-6 bg-red-500 rounded-full
+  .header {
+    @apply relative flex justify-between gap-16 m-16 1210bps:mx-20 xl:my-16 xl:mx-32
+  }
+
+  .sale-span {
+    @apply flex justify-center items-center h-[40px] w-[120px] bg-red-500 text-white font-semibold rounded-md
+  }
+
+  .header-left-side {
+    @apply flex flex-col flex-1 justify-between py-8 lg:pt-12 lg:pb-5
+  }
+
+  .header-content {
+    @apply flex flex-col justify-center gap-10 p-0
+  }
+
+  .header-featured {
+    @apply flex gap-12
+  }
+
+  .header-right-side {
+    @apply hidden lg:flex flex-1
+  }
+
+  .header-circle {
+    @apply hidden lg:block w-[600px] h-[600px] rounded-full bg-[#ffece3]
+  }
+
+  .hero-image {
+    @apply hidden lg:block absolute -top-5
   }
 }
   
