@@ -4,6 +4,7 @@
 
 @layer base {
 
+  /* HERO SECTION */
   /* main {
     @apply m-16 1210bps:mx-24 xl:my-16 xl:mx-32
   } */
@@ -39,5 +40,130 @@
   .hero-image {
     @apply hidden lg:block absolute -top-5
   }
+
+  section {
+    @apply m-16 1210bps:mx-20 xl:my-32 xl:mx-32
+  }
+
+  .subtitle {
+    @apply flex flex-col gap-4 text-center mb-8
+  }
+
+  /* EVENT SECTION */
+  .event-banner {
+    @apply flex justify-between gap-8
+  }
+
+  .event-banner-left {
+    @apply flex flex-col flex-2-1 gap-4
+  }
+
+  .event-card-1 {
+    @apply bg-[#d6d6d8] flex justify-between items-center py-0 px-8 tracking-[0.05]
+  }
+
+  /* .card-1-content {
+    @apply ml-10
+  } */
+
+  .event-card-2 {
+    @apply bg-[#212121] flex flex-col justify-center items-center px-8 pt-12 pb-8
+  }
+
+  .event-banner-right {
+    @apply flex justify-between items-center gap-4
+  }
+
+  .event-banner-right-1 {
+    @apply bg-[#efe1c7]
+  }
+
+  .event-banner-right-2 {
+    @apply bg-[#d7d7d9]
+  }
+
+  .event-banner-right-1, .event-banner-right-2 {
+    @apply flex flex-col justify-between items-center pt-6
+  }
+
+  .event-banner-right-1 .details, .event-banner-right-2 .details {
+    @apply w-full ml-10
+  }
+
+  /* PRODUCT SHOWCASE SECTION */
+  .product-showcase {
+    @apply flex justify-between px-5
+  }
+
+  /* FEATURES SECTION */
+  .features-section {
+    @apply mx-0
+  }
+
+  .features-section .title {
+    @apply flex justify-end
+  }
+
+  .features-section .content {
+    @apply grid grid-cols-2 bg-[#fbfcff] pb-16
+  }
+
+  .features-section .title, .features-section .content {
+    @apply px-32
+  }
+
+  .features-section .content .left {
+    @apply relative grid grid-cols-2 justify-center items-center pt-14
+  }
+
+  .feature-background {
+    @apply absolute top-[83px] text-[7.5rem] text-[#212121] font-bold leading-[110px] opacity-[0.06] z-10
+  }
+
+  .features-section .content .left div {
+    @apply w-[70%] z-20
+  }
+
+  .features-section .content .left h3 {
+    @apply text-lg text-[#212121] font-semibold leading-5 tracking-[0.03em] mb-4
+  }
+
+  .features-section .content .left p {
+    @apply text-base text-[#212121] font-light leading-[22px] tracking-wider
+  }
+
+  .features-section .content .right {
+    @apply flex justify-center items-center gap-10
+  }
+
+  .features-section .content .right div {
+    @apply flex flex-col gap-8
+  }
+
+  .features-section .content .right p {
+    @apply text-base text-[#212121] font-light leading-[26px] text-justify
+  }
+
+  /* NESLETTER SECTION */
+  .newsletter {
+    @apply relative flex flex-col justify-center items-center text-center px-40 pt-10 pb-14 z-10
+  }
+
+  .newsletter-background {
+    @apply absolute text-[7.5rem] text-[#f2f3f7] font-extrabold leading-[151px] -z-10
+  }
+
+  .newsletter h1 {
+    @apply text-[2rem] text-[#212121] font-bold leading-10 tracking-[0.03em] mb-4
+  }
+
+  .newsletter p {
+    @apply text-base text-[#212121] font-light leading-[26px] mb-8
+  }
+
+  .newsletter form {
+    @apply flex gap-4 w-1/2
+  }
+
 }
   

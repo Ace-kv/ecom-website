@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @layer components {
+
+  /* HEADER */
   .navbar {
     @apply flex justify-between items-center m-8 md:mx-16 xl:my-8 xl:mx-32
   }
@@ -27,4 +29,61 @@
     @apply absolute w-[21px] h-[20px] text-sm top-0 left-6 bg-red-500 rounded-full
   }
 
+  /* PRODUCT SHOWCASE */
+  .product-card {
+    @apply flex flex-col justify-center items-center xl:items-start py-8 transition ease-in-out hover:scale-110 duration-500
+  }
+
+  .product-name {
+    @apply text-[1.1rem] mt-3.5 tracking-[0.03em]
+  }
+
+  .product-price {
+    @apply text-[1.2rem] mt-2
+  }
+
+  .product-name, .product-price {
+    @apply font-semibold text-[#212121] leading-6
+  }
+
+  /* FOOTER*/
+  .footer {
+    @apply grid grid-cols-[2fr,1fr,1fr,1fr] px-32 py-8
+  }
+
+  .footer .logo-and-socials {
+    @apply flex flex-col justify-between w-[80%]
+  }
+
+  .footer p, .footer li {
+    @apply text-[#535555] text-base
+  }
+
+  .footer .logo-and-socials .icon-container {
+    @apply flex gap-4
+  }
+
+  .footer .logo-and-socials .icon-container div {
+    @apply bg-[#f1f1f1] cursor-pointer px-3 py-2.5 rounded-[10px]
+  }
+
+  .footer .footer-links h3 {
+    @apply text-[#535555] text-[1.2rem] font-bold leading-[19px] tracking-[0.02em]
+  }
+
+  .footer li {
+    @apply first:mt-6 mt-3
+  }
+
+  .copyright {
+    @apply grid grid-cols-[auto,auto,auto] mt-32 border-t border-[#535555]
+  }
+
+  .copyright p {
+    @apply px-32 py-6
+  }
+
+  .copyright span {
+    @apply font-bold
+  }
 }

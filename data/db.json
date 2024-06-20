@@ -1,0 +1,20 @@
+{
+    "products": [
+        {
+            "id": "product-1",
+            "name": "Flex Push Button Bomber",
+            "category": "Jackets",
+            "gender": "Male",
+            "price": "$225.00",
+            "img_URL": "/images/male-1.png"
+        },
+        {
+            "id": "product-2",
+            "name": "Raglan Sweatshirt",
+            "category": "Sweater",
+            "gender": "Male",
+            "price": "$195.00",
+            "img_URL": "/images/male-2.png"
+        }
+    ]
+}

@@ -21,6 +21,9 @@ const config = {
       screens: {
         '1210bps': '1210px',
       },
+      flex: {
+        '2-1': '2 1 0%',
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
