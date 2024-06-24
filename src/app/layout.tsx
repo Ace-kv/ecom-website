@@ -3,6 +3,8 @@ import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 // const inter = Inter({ subsets: ["latin"] });
 const sora = Sora({ subsets: ["latin"] });
@@ -20,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sora.className} overflow-x-hidden max-w-[100vw]`}>
-        <Header />
-        {children}
-        <Footer />
+        <Suspense fallback={<Loading />}>
+          <Header />
+          {children}
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );

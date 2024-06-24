@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Loading CSS */
+.loading-ring,
+.loading-ring:after {
+  box-sizing: border-box;
+}
+.loading-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+.loading-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6.4px solid currentColor;
+  border-color: black transparent black transparent;
+  animation: loading-ring 1.2s linear infinite;
+}
+@keyframes loading-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 @layer base {
 
   /* HERO SECTION */
