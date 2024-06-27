@@ -1,11 +1,12 @@
+import '@/components/styles.css'
 import Link from "next/link"
 import Image from "next/image"
 
-const ProductShowcaseItem = ({product}: {
+const ProductCard = ({product}: {
     product: {
         id: string,
         name: string,
-        category: string,
+        tag: string,
         gender: string,
         price: string,
         img_URL: string
@@ -29,4 +30,4 @@ const ProductShowcaseItem = ({product}: {
     )
 }
 
-export default ProductShowcaseItem
+export default ProductCard

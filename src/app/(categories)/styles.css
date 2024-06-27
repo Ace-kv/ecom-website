@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  /* MALE CATEOGORY */
+  .all-products-container {
+    @apply grid grid-cols-4 justify-between items-center gap-20 m-8 md:mx-16 xl:my-8 xl:mx-[8.5rem]
+  }
+}

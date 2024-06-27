@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ShoppingCart } from "lucide-react"
 import Image from "next/image"
-import ProductShowcaseItem from "@/components/product-showcase"
+import ProductCard from "@/components/product-card"
 import data from '../../data/db.json'
 import { Input } from "@/components/ui/input"
 import Header from "@/components/header"
@@ -131,9 +131,9 @@ const Home = () => {
             <h2 className="text-[32px] font-bold tracking-wide leading-10">Check What We Have</h2>
           </div>
           <div className="product-showcase">
-            <ProductShowcaseItem product={data.products[0]} />
-            <ProductShowcaseItem product={data.products[1]} />
-            <ProductShowcaseItem product={data.products[0]} />
+            <ProductCard product={data.products.male[0]}/>
+            <ProductCard product={data.products.male[1]} />
+            <ProductCard product={data.products.male[0]} />
           </div>
         </section>
 

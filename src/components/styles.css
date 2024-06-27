@@ -29,7 +29,7 @@
     @apply absolute w-[21px] h-[20px] text-sm top-0 left-6 bg-red-500 rounded-full
   }
 
-  /* PRODUCT SHOWCASE */
+  /* PRODUCT CARD */
   .product-card {
     @apply flex flex-col justify-center items-center xl:items-start py-8 transition ease-in-out hover:scale-110 duration-500
   }
@@ -44,6 +44,27 @@
 
   .product-name, .product-price {
     @apply font-semibold text-[#212121] leading-6
+  }
+
+  /* ALL PRODUCT CARD */
+  .all-product-card {
+    @apply flex flex-col justify-center items-center xl:items-start py-8
+  }
+
+  .all-product-name {
+    @apply text-[1.05rem] mt-3.5
+  }
+
+  .all-product-tag {
+    @apply text-[#888] text-[15px] font-semibold leading-4 mt-2
+  }
+
+  .all-product-price {
+    @apply text-xl mt-4
+  }
+
+  .all-product-name, .all-product-price {
+    @apply font-semibold text-[#212121] leading-6 tracking-[0.03em]
   }
 
   /* FOOTER*/
