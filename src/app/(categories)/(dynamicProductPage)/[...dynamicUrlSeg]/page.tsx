@@ -7,7 +7,7 @@ import UnitCounter from "@/components/unit-counter"
 import { ShoppingCart } from "lucide-react"
 import { getAllProductData } from "../../male/page"
 
-export const getProductData = async (dynamicUrl: string) => {
+const getProductData = async (dynamicUrl: string) => {
     const res = await client.fetch(`*[_type=='product' && dynamicUrlSeg=='${dynamicUrl}'][0]`)
     return res
 }
