@@ -14,8 +14,8 @@ const AllProductCard = ({product}: {
                     <Image
                         src={urlForImage(product.big_image)}
                         alt=""
-                        width={280}
-                        height={200}
+                        width={300}
+                        height={300}
                     />
                     <p className="all-product-name">{product.title}</p>
                     <p className="all-product-tag">{product.tag}</p>
