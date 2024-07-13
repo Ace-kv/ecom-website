@@ -1,28 +1,23 @@
 import '@/components/styles.css'
 import Link from "next/link"
 import Image from "next/image"
+import { urlForImage } from '../../sanity/lib/image'
+import SProduct from '@/app/types/product'
 
 const ProductCard = ({product}: {
-    product: {
-        id: string,
-        name: string,
-        tag: string,
-        gender: string,
-        price: string,
-        img_URL: string
-    }
+    product: SProduct
 }) => {
     return (
         <div>
-            <Link href={'/'}>
+            <Link href={`/product/${product.dynamicUrlSeg}`}>
                 <div className="product-card">
                     <Image
-                        src={product.img_URL}
+                        src={urlForImage(product.big_image)}
                         alt=""
                         width={380}
                         height={400}
                     />
-                    <p className="product-name">{product.name}</p>
+                    <p className="product-name">{product.title}</p>
                     <p className="product-price">{product.price}</p>
                 </div>
             </Link>

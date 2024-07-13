@@ -2,7 +2,7 @@
     "products": {
         "male": [
             {
-                "id": "male-product-1",
+                "id": "flex-push-button-bomber",
                 "name": "Flex Push Button Bomber",
                 "tag": "Jackets",
                 "gender": "Male",
@@ -10,7 +10,7 @@
                 "img_URL": "/images/male-1.png"
             },
             {
-                "id": "male-product-2",
+                "id": "raglan-sweatshirt",
                 "name": "Raglan Sweatshirt",
                 "tag": "Sweater",
                 "gender": "Male",

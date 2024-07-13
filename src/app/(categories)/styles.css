@@ -8,4 +8,110 @@
   .all-products-container {
     @apply grid grid-cols-4 justify-between items-center gap-20 m-8 md:mx-16 xl:my-8 xl:mx-[8.5rem]
   }
+
+  /* DYNAMIC ROUTE */
+  .products {
+    @apply bg-stone-50 bg-opacity-50 p-8 md:px-16 xl:py-16 xl:px-32
+  }
+
+  .product-detail-container {
+    @apply flex justify-between
+  }
+
+  .product-images {
+    @apply flex flex-2-1 gap-8
+  }
+
+  .small-images-container {
+    @apply flex flex-col gap-4
+  }
+
+  .big-image-container {
+    @apply w-[80%] h-full
+  }
+
+  .product-details {
+    @apply flex flex-col flex-1 gap-6 mt-16
+  }
+
+  .product-details h3 {
+    @apply text-[#212121] text-[1.625rem] leading-[33px] tracking-wider
+  }
+
+  .name-and-category {
+    @apply mb-4
+  }
+
+  .name-and-category span {
+    @apply text-[1.3rem] font-semibold opacity-30
+  }
+
+  .size p {
+    @apply text-[#212121]
+  }
+
+  .size ul {
+    @apply flex gap-4 mt-4
+  }
+
+  .size p, .size li {
+    @apply text-[0.9rem] font-bold leading-4 tracking-wider
+  }
+
+  .size li {
+    @apply w-10 h-10 flex justify-center items-center rounded-full cursor-pointer text-base text-[#636563] hover:shadow-xl
+  }
+
+  .quantity-desc {
+    @apply flex gap-8 items-center
+  }
+
+  .quantity-desc h4 {
+    @apply font-bold
+  }
+
+  .add-to-cart {
+    @apply flex items-center gap-4
+  }
+
+  .add-to-cart .price {
+    @apply text-[#212121] text-2xl font-bold leading-[30px] tracking-widest
+  }
+
+  .product-desc-container {
+    @apply bg-white flex flex-col mt-16 px-16 pt-8 pb-24 gap-8
+  }
+
+  .product-desc-container div {
+    @apply flex z-20
+  }
+
+  .desc-title {
+    @apply border-b-2 border-gray-300 relative w-full h-[150px]
+  }
+
+  .desc-background {
+    @apply font-bold text-[7.5rem] leading-[151px] text-gray-100 opacity-70 -z-10 w-full h-full
+  }
+
+  .desc-title h2 {
+    @apply font-bold text-[1.4rem] leading-[25px] tracking-[.05em] text-[#212121] pb-12 z-20 top-[45%] absolute
+  }
+
+  .product-desc-container h4 {
+    @apply flex-1 font-bold text-base leading-5 tracking-wider text-gray-500
+  }
+
+  .product-desc-container p, .product-desc-container ul {
+    @apply flex-2-1
+  }
+
+  .product-desc-container li, .product-desc-container p {
+    @apply font-light text-base leading-[26px] text-justify tracking-wider text-[#212121]
+  }
+
+  .product-desc-container li {
+    @apply font-semibold list-inside list-disc
+  }
+  
 }

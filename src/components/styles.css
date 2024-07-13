@@ -107,4 +107,13 @@
   .copyright span {
     @apply font-bold
   }
+
+  /* UNIT COUNTER */
+  .minus {
+    @apply mr-1.5
+  }
+
+  .plus {
+    @apply ml-1.5
+  }
 }
