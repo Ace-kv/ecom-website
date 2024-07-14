@@ -6,7 +6,7 @@
 
   /* MALE CATEOGORY */
   .all-products-container {
-    @apply grid grid-cols-4 justify-between items-center gap-y-4.5 gap-x-20 m-8 md:mx-16 xl:mt-16 xl:mb-8 xl:mx-[8.5rem]
+    @apply grid grid-cols-4 justify-between items-center gap-y-[18px] gap-x-20 m-8 md:mx-16 xl:mt-16 xl:mb-8 xl:mx-[8.5rem]
   }
 
   /* DYNAMIC ROUTE */
