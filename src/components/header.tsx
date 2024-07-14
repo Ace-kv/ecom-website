@@ -39,11 +39,13 @@ const Header = () => {
                         placeholder="What you looking for"
                     />
                 </div>
-                <Button className="hidden lg:flex bg-gray-100 rounded-full w-[50px] h-[50px] p-0 relative hover:scale-110 
-                                   hover:bg-gray-100 transition ease-in duration-200">
-                    <ShoppingCart className="cart-icon" size={22} color="black"/>
-                    <span className="cart-item-qty">0</span>
-                </Button>
+                <Link href={'/cart'}>
+                    <Button className="hidden lg:flex bg-gray-100 rounded-full w-[50px] h-[50px] p-0 relative hover:scale-110 
+                                    hover:bg-gray-100 transition ease-in duration-200">
+                        <ShoppingCart className="cart-icon" size={22} color="black"/>
+                        <span className="cart-item-qty">0</span>
+                    </Button>
+                </Link>
                 <Button className="lg:hidden bg-transparent hover:bg-transparent hover:transition-none">
                     <Menu className="menu-icon" color="#000000" />
                 </Button>

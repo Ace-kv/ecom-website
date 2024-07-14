@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .cart-wrapper {
+        @apply m-16 1210bps:mx-20 xl:my-16 xl:mx-32 p-12
+    }
+
+    .cart-wrapper h2 {
+        @apply font-bold text-2xl
+    }
+
+    .cart-container {
+        @apply flex justify-between gap-16
+    }
+
+    .cart-items {
+        @apply mt-12 mb-4 gap-16 flex-1 /* flex-3-1 */
+    }
+
+    .empty-cart {
+        @apply justify-center items-center gap-2
+    }
+
+    .cart-items, .empty-cart {
+        @apply flex flex-col
+    } 
+
+    .empty-cart {
+        @apply font-bold text-[2em]
+    }
+}

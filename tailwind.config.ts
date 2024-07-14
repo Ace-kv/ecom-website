@@ -23,6 +23,7 @@ const config = {
       },
       flex: {
         '2-1': '2 1 0%',
+        '3-1': '3 1 0%',
       },
       keyframes: {
         "accordion-down": {
