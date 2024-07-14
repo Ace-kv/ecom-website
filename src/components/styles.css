@@ -48,7 +48,7 @@
 
   /* ALL PRODUCT CARD */
   .all-product-card {
-    @apply flex flex-col justify-center items-center xl:items-start pt-8
+    @apply flex flex-col justify-center items-center xl:items-start
   }
 
   .all-product-name {
