@@ -136,7 +136,7 @@ const Home = () => {
           <div className="product-showcase">
             <ProductCard product={data[0]} />
             <ProductCard product={data[1]} />
-            <ProductCard product={data[0]} />
+            <ProductCard product={data[2]} />
           </div>
         </section>
 
