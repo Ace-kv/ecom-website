@@ -3,6 +3,9 @@ import { Sora } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import Loading from "./loading";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+import CartCountProvider from "./cart-context";
 
 // const inter = Inter({ subsets: ["latin"] });
 const sora = Sora({ subsets: ["latin"] });
@@ -21,7 +24,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sora.className} overflow-x-hidden max-w-[100vw]`}>
         <Suspense fallback={<Loading />}>
-          {children}
+          <CartCountProvider>
+            {children}
+          </CartCountProvider>
+          <ToastContainer />
         </Suspense>
       </body>
     </html>

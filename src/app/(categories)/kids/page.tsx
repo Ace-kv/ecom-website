@@ -1,7 +1,7 @@
 import "@/app/(categories)/styles.css"
 import AllProductCard from "@/components/all-product-card"
 import SProduct from "@/app/types/product"
-import { getAllProductData } from "../male/page"
+import { getAllProductData } from "../products/page"
 
 const KidsPage = async () => {
     const products: SProduct[] = await getAllProductData('Kids')

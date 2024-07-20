@@ -4,21 +4,40 @@ import { client } from "../../../../../sanity/lib/client"
 import SProduct from "@/app/types/product"
 import { urlForImage } from "../../../../../sanity/lib/image"
 import UnitCounter from "@/components/unit-counter"
-import { ShoppingCart } from "lucide-react"
-import { getAllProductData } from "../../male/page"
+import AddToCartBtn from "@/components/addToCartButton"
+import { getAllProductData } from "../../products/page"
 
-const getProductData = async (dynamicUrl: string) => {
-    const res = await client.fetch(`*[_type=='product' && dynamicUrlSeg=='${dynamicUrl}'][0]`)
-    return res
+// Commented Code is for Fetching Data on Request
+
+// const getProductData = async (dynamicUrl: string) => {
+//     const res = await client.fetch(`*[_type=='product' && dynamicUrlSeg=='${dynamicUrl}'][0]`)
+//     return res
+// }
+
+const res: SProduct[] = await getAllProductData()
+
+const generateStaticParams = () => {
+    return res.map((product) => ({
+        dynamicUrlSeg: ['product', product.dynamicUrlSeg],
+    }))
 }
 
-const ProductPage = async ({ params }: {
+const ProductPage = ({ params }: {
     params: {
         dynamicUrlSeg: string[]}
-}) => {
+    }) => {
+
     const { dynamicUrlSeg } = params
-    const data: SProduct = await getProductData(dynamicUrlSeg[1])
     
+    // const data: SProduct = await getProductData(dynamicUrlSeg[1]) 
+    const data: SProduct | undefined = res.find(product => product.dynamicUrlSeg === dynamicUrlSeg[1])
+    console.log('Dynamic URL Segment:', dynamicUrlSeg);
+    console.log('Data:', data);
+    
+    if (!data) {
+        throw new Error('Product not found');
+    }
+
     return (
         <div className="products">
             <div className="product-detail-container">
@@ -63,11 +82,7 @@ const ProductPage = async ({ params }: {
                         <UnitCounter />
                     </div>
                     <div className="add-to-cart">
-                        <button className="flex justify-center items-center gap-2 text-white bg-[#212121] text-base
-                                           leading-4 font-semibold py-3 px-4 rounded-sm">             
-                            <ShoppingCart />
-                            Add to Cart
-                        </button>
+                        <AddToCartBtn item={data}/>
                         <p className="price">{data.price}.00</p>
                     </div>
                 </div>
