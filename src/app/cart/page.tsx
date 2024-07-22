@@ -17,10 +17,12 @@ export interface DResult {
 const allProductData: SProduct[] = await getAllProductData()
 
 const Cart = async () => {
-    const user_id = cookies().get('user_id')?.value
+    let user_id = cookies().get('user_id')?.value
+
+    if (!user_id) user_id = undefined
+
     const res = await fetch(`https://ecom-website-amber.vercel.app/api/cart?user_id=${user_id}`, {
         method: 'GET',
-        cache: 'no-store'
     }).then(response => response.json())
 
     const product_ids: string[] = res.res.map((product: DResult) => product.product_id)
