@@ -5,7 +5,7 @@ import SProduct from "@/app/types/product"
 import { urlForImage } from "../../../../../sanity/lib/image"
 import UnitCounter from "@/components/unit-counter"
 import AddToCartBtn from "@/components/addToCartButton"
-import { getAllProductData } from "../../products/page"
+import getAllProductData from "@/lib/Product-Data/products"
 
 // Commented Code is for Fetching Data on Request
 
@@ -14,7 +14,7 @@ import { getAllProductData } from "../../products/page"
 //     return res
 // }
 
-const res: SProduct[] = await getAllProductData()
+export const res: SProduct[] = await getAllProductData()
 
 const generateStaticParams = () => {
     return res.map((product) => ({

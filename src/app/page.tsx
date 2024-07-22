@@ -5,7 +5,7 @@ import ProductCard from "@/components/product-card"
 import { Input } from "@/components/ui/input"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import { getAllProductData } from "./(categories)/products/page"
+import getAllProductData from "@/lib/Product-Data/products"
 import SProduct from "./types/product"
 
 const data: SProduct[] = await getAllProductData('Male')

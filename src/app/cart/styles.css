@@ -30,4 +30,12 @@
     .empty-cart {
         @apply font-bold text-[2em]
     }
+
+    .item-card {
+        @apply flex gap-8
+    }
+
+    .item-image {
+        @apply w-[25%] h-[190px] rounded-[9px]
+    }
 }
