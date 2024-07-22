@@ -27,7 +27,7 @@ export default function RootLayout({
           <CartCountProvider>
             {children}
           </CartCountProvider>
-          <ToastContainer />
+          <ToastContainer autoClose={3500} />
         </Suspense>
       </body>
     </html>

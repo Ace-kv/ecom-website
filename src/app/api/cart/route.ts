@@ -34,7 +34,12 @@ export const POST = async (request: NextRequest) => {
 
     if (!user_id) {
         user_id = randomUUID();
-        cookies().set('user_id', user_id);
+        cookies().set('user_id', user_id, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            maxAge: 60 * 60 * 24 * 7, // One week
+            path: '/',
+        });
     }
 
     try {
