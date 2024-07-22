@@ -2,7 +2,7 @@ import '@/app/cart/styles.css'
 import { ShoppingBag } from 'lucide-react'
 import { cookies } from 'next/headers'
 import ToastErrorAlert from '@/components/ui/toastifyErrorAlert'
-import { res as allProductData } from '../(categories)/(dynamicProductPage)/[...dynamicUrlSeg]/page'
+import getAllProductData from '@/lib/Product-Data/products'
 import SProduct from '../types/product'
 import Image from 'next/image'
 import { urlForImage } from '../../../sanity/lib/image'
@@ -13,6 +13,8 @@ export interface DResult {
     product_id: string,
     quantity: number
 }
+
+const allProductData = await getAllProductData()
 
 const Cart = async () => {
     const user_id = cookies().get('user_id')?.value

@@ -1,6 +1,5 @@
 import "@/app/(categories)/styles.css"
 import Image from "next/image"
-import { client } from "../../../../../sanity/lib/client"
 import SProduct from "@/app/types/product"
 import { urlForImage } from "../../../../../sanity/lib/image"
 import UnitCounter from "@/components/unit-counter"
@@ -14,7 +13,7 @@ import getAllProductData from "@/lib/Product-Data/products"
 //     return res
 // }
 
-export const res: SProduct[] = await getAllProductData()
+const res: SProduct[] = await getAllProductData()
 
 const generateStaticParams = () => {
     return res.map((product) => ({
