@@ -19,7 +19,8 @@ const allProductData: SProduct[] = await getAllProductData()
 const Cart = async () => {
     const user_id = cookies().get('user_id')?.value
     const res = await fetch(`https://ecom-website-amber.vercel.app/api/cart?user_id=${user_id}`, {
-        method: 'GET'
+        method: 'GET',
+        cache: 'no-store'
     }).then(response => response.json())
 
     const product_ids: string[] = res.res.map((product: DResult) => product.product_id)
